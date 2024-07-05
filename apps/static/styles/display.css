@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans=serif';
+  }
+  
+  .hero{
+      background-image: url('/static/images/body_bg.jpg');
+      min-height: 100vh;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      overflow:hidden;
+    }
+  
+  .navbar{
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+    }
+  
+  .logo{
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 130px;
+    height: 18px;
+  }
+.container-fluid{
+    width: auto;
+    margin-top: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row-element{
+    width: 300px;
+}
+.box{
+    background: #fff;
+    margin-bottom: 30px;
+    transition: ease-in all 0.5s;
+    padding: 25px 15px 50px 15px;
+    height: 300px;
+}
+.box h3{
+    color: #0c0b0b;
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: ease-in all 0.5s;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+.box p{
+    color: #191a1a;
+    font-size: 16px;
+    line-height: 28px;
+    transition: ease-in all 0.5s;
+}
+.box:hover{
+    background: #face34;
+    color: #fff;
+    transition: ease-in all 0.5s;
+      border: #face34 solid 2px;
+}
+.box:hover.box h3{
+    color:white;
+    transition: ease-in all 0.5s;
+}
+.box:hover.box p{
+    color:white;
+    transition: ease-in all 0.5s;
+}
+
+.container-fluid-h3{
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+a{
+    text-decoration: none;
+}

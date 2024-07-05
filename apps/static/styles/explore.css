@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans=serif';
+  }
+  
+  .hero{
+      background-image: url('/static/images/body_bg.jpg');
+      min-height: 100vh;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      overflow:hidden;
+    }
+  
+  .navbar{
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+    }
+  
+  .logo{
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 130px;
+    height: 18px;
+  }
+.container-fluid{
+    margin: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px dashed white;
+    padding: 10px;
+    height: 550px ;
+    
+  }
+
+  .container-text{
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 55px;
+    color: #fff;
+  }
+
+  .paragraph{
+    line-height: 33px;
+    padding-top: 30px;
+    font-weight: 400;
+    padding-bottom: 40px;
+    font-size: 17px;
+    color:#fff
+  }
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color:#fff;
+    margin-right: 20px;
+}
+.custom-file-upload:hover{
+    background: #face34;
+    color: #fff;
+    transition: ease-in all 0.5s;
+    border: #face34 solid 2px;
+}
+input[type="submit"] {
+    display: none;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

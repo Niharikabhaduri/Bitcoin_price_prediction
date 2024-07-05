@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/display.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <nav class="navbar">
+            <img src = "/static/images/logo.png" class="logo">
+        </nav>
+        <div class="container-fluid">
+            <h1 class="container-fluid-h3">Select Any Algorithm</h1>
+            <div class="row">
+                <div class="row-element">
+                    <a href="{{url_for('rfmodel')}}">
+                    <div class="box">
+                        <h3>RANDOM FOREST<br>REGRESSOR</h3>
+                        <p>A Random Forest Regressor is an ensemble learning method used for regression tasks</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="row-element">
+                    <a href="{{url_for('gbmodel')}}">
+                    <div class="box">
+                        <h3>GRADIENT BOOSTING<br>REGRESSOR</h3>
+                        <p>Gradient Boosting is a powerful machine learning technique used for regression and classification tasks</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="row-element">
+                    <a href="{{url_for('lstmmodel')}}">
+                    <div class="box">
+                        <h3>LONG SHORT-TERM<br>MEMORY MODEL</h3>
+                        <p>Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) architecture designed to model temporal sequences and their long-range dependencies more accurately than conventional RNNs</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="row-element">
+                    <a href="{{url_for('grumodel')}}">
+                    <div class="box">
+                        <h3>GRATED RECURRENT<br>UNIT MODEL</h3>
+                        <p>The Gated Recurrent Unit (GRU) is a type of recurrent neural network (RNN) architecture that is designed to capture temporal dependencies in sequential data, similar to Long Short-Term Memory (LSTM) networks</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

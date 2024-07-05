@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/lstm.css') }}">
+    <script>
+        function fetchGraph() {
+            fetch('http://127.0.0.1:5000/Generate-actual-predicted-price-lstm').then(response => response.blob()).then(blob => {
+                const img = document.getElementById('graph');
+                img.src = URL.createObjectURL(blob);
+            }).catch(error => console.log(error))
+        }
+
+        function fetchGraph1() {
+            fetch('http://127.0.0.1:5000/Generate-feature-importance-lstm').then(response => response.blob()).then(blob => {
+              const img = document.getElementById('graph1');
+              img.src = URL.createObjectURL(blob); } 
+            ).catch(error => console.log(error))
+        }
+
+        function fetchGraph2(){
+            fetch('http://127.0.0.1:5000/Generate-correlation-lstm').then(response => response.blob()).then(blob => {
+              const img = document.getElementById('graph2');
+              img.src = URL.createObjectURL(blob); } 
+            ).catch(error => console.log(error))
+
+        }
+
+        function fetchGraph3(){
+            fetch('http://127.0.0.1:5000/Generate-evaluation-metrics-lstm').then(response => response.blob()).then(blob => {
+              const img = document.getElementById('graph3');
+              img.src = URL.createObjectURL(blob); } 
+            ).catch(error => console.log(error))
+        }
+        
+        window.onload = function fetchApi(){
+            fetchGraph();
+            fetchGraph1();
+            fetchGraph2();
+            fetchGraph3()}
+    </script>
+</head>
+<body>
+    <div class="hero">
+        <nav class="navbar">
+            <img src = "/static/images/logo.png" class="logo">
+        </nav>
+        <div class="image-container">
+            <h1>"Bitcoin Price Prediction Using Long Short-Term Model: An Analytical Dashboard"</h1>
+            <div class="container-1">
+            <img id="graph" src="" alt="Graph will be displayed here">
+            <img id="graph1" src="" alt="Graph will be displayed here">
+            </div>
+            <div class="container-1">
+                <img id="graph2" src="" alt="Graph will be displayed here">
+                <img id="graph3" src="" alt="Graph will be displayed here">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/explore.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <nav class="navbar">
+            <img src = "/static/images/logo.png" class="logo">
+        </nav>
+    
+    <div class="container-fluid">
+        <h1 class="container-text">Upload a file</h1>
+        <p class="paragraph">The file should be in csv format containing the details of the Bitcoin price</p>
+        <div class="container">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label class="custom-file-upload">
+            <input type="file" name="file" accept=".csv"/>
+             Upload csv file
+        </label>
+        <label class="custom-file-upload">
+            <input type="submit"/>
+             Submit
+        </label>
+        </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
